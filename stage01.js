@@ -482,101 +482,100 @@ if (mNum==1){
     player_shield.src = "./img/player_shield.png";
     player_shield.addEventListener("load",drawScreen, false);
 
+    //폭파이미지01
+    var explosionImage01 = new Image(); 
+    explosionImage01.src = "./img/explosion01.png";
+    explosionImage01.addEventListener("load",drawScreen, false);
 
-//폭파이미지01
-var explosionImage01 = new Image(); 
-explosionImage01.src = "./img/explosion01.png";
-explosionImage01.addEventListener("load",drawScreen, false);
+    //엔진이미지
+    var player_enginImage = new Image();
+    player_enginImage.src = "./img/engin.png";
+    player_enginImage.addEventListener("load",drawScreen, false);
 
-//엔진이미지
-var player_enginImage = new Image();
-player_enginImage.src = "./img/engin.png";
-player_enginImage.addEventListener("load",drawScreen, false);
+    // enginImage = enginImage;
+    // enginImage.src = enginImage.src;
 
-// enginImage = enginImage;
-// enginImage.src = enginImage.src;
+    //플레이어 스킬이미지
+    var playerSkillImage = new Image();
+    playerSkillImage.src = "./img/none.png"; 
+    playerSkillImage.addEventListener("load",drawScreen, false);
 
-//플레이어 스킬이미지
-var playerSkillImage = new Image();
-playerSkillImage.src = "./img/none.png"; 
-playerSkillImage.addEventListener("load",drawScreen, false);
+    //플레이어 스킬0이미지
+    var playerSword_Image = new Image();
+    //playerSword_Image.src = "./img/noneImage.png"; 
+    playerSword_Image.src = "./img/none.png"; 
+    playerSword_Image.addEventListener("load",drawScreen, false);
 
-//플레이어 스킬0이미지
-var playerSword_Image = new Image();
-//playerSword_Image.src = "./img/noneImage.png"; 
-playerSword_Image.src = "./img/none.png"; 
-playerSword_Image.addEventListener("load",drawScreen, false);
+    var playerSword_StopImage = new Image();
+    playerSword_StopImage.src = "./img/player_skill00.png"; 
+    playerSword_StopImage.addEventListener("load",drawScreen, false);
 
-var playerSword_StopImage = new Image();
-playerSword_StopImage.src = "./img/player02_skill00.png"; 
-playerSword_StopImage.addEventListener("load",drawScreen, false);
+    var playerSword_UpImage = new Image();
+    playerSword_UpImage.src = "./img/player_skill00_up.png"; 
+    playerSword_UpImage.addEventListener("load",drawScreen, false);
 
-var playerSword_UpImage = new Image();
-playerSword_UpImage.src = "./img/player02_skill00_up.png"; 
-playerSword_UpImage.addEventListener("load",drawScreen, false);
+    var playerSword_RightImage = new Image();
+    playerSword_RightImage.src = "./img/player_skill00_right.png"; 
+    playerSword_RightImage.addEventListener("load",drawScreen, false);
 
-var playerSword_RightImage = new Image();
-playerSword_RightImage.src = "./img/player02_skill00_right.png"; 
-playerSword_RightImage.addEventListener("load",drawScreen, false);
+    var playerSword_LeftImage = new Image();
+    playerSword_LeftImage.src = "./img/player_skill00_left.png"; 
+    playerSword_LeftImage.addEventListener("load",drawScreen, false);
 
-var playerSword_LeftImage = new Image();
-playerSword_LeftImage.src = "./img/player02_skill00_left.png"; 
-playerSword_LeftImage.addEventListener("load",drawScreen, false);
+    var playerSword_DownImage = new Image();
+    playerSword_DownImage.src = "./img/player_skill00_down.png"; 
+    playerSword_DownImage.addEventListener("load",drawScreen, false);
 
-var playerSword_DownImage = new Image();
-playerSword_DownImage.src = "./img/player02_skill00_down.png"; 
-playerSword_DownImage.addEventListener("load",drawScreen, false);
+    //플레이어 스킬1이미지
+    var playerSkill_01Image = new Image();
+    playerSkill_01Image.src = "./img/player_skill01_down.png"; 
+    playerSkill_01Image.addEventListener("load",drawScreen, false);
 
-//플레이어 스킬1이미지
-var playerSkill_01Image = new Image();
-playerSkill_01Image.src = "./img/player02_skill01_down.png"; 
-playerSkill_01Image.addEventListener("load",drawScreen, false);
+    //플레이어 스킬2이미지
+    var playerSkill_02Image = new Image();
+    playerSkill_02Image.src = "./img/player_skill02_up.png"; 
+    playerSkill_02Image.addEventListener("load",drawScreen, false);
 
-//플레이어 스킬2이미지
-var playerSkill_02Image = new Image();
-playerSkill_02Image.src = "./img/player02_skill02_up.png"; 
-playerSkill_02Image.addEventListener("load",drawScreen, false);
+    var playerSkill_02UpImage = new Image();
+    playerSkill_02UpImage.src = "./img/player_skill02_up.png"; 
+    playerSkill_02UpImage.addEventListener("load",drawScreen, false);
 
-var playerSkill_02UpImage = new Image();
-playerSkill_02UpImage.src = "./img/player02_skill02_up.png"; 
-playerSkill_02UpImage.addEventListener("load",drawScreen, false);
+    var playerSkill_02RightImage = new Image();
+    playerSkill_02RightImage.src = "./img/player_skill02_right.png"; 
+    playerSkill_02RightImage.addEventListener("load",drawScreen, false);
 
-var playerSkill_02RightImage = new Image();
-playerSkill_02RightImage.src = "./img/player02_skill02_right.png"; 
-playerSkill_02RightImage.addEventListener("load",drawScreen, false);
+    var playerSkill_02DownImage = new Image();
+    playerSkill_02DownImage.src = "./img/player_skill02_down.png"; 
+    playerSkill_02DownImage.addEventListener("load",drawScreen, false);
 
-var playerSkill_02DownImage = new Image();
-playerSkill_02DownImage.src = "./img/player02_skill02_down.png"; 
-playerSkill_02DownImage.addEventListener("load",drawScreen, false);
+    var playerSkill_02LeftImage = new Image();
+    playerSkill_02LeftImage.src = "./img/player_skill02_left.png"; 
+    playerSkill_02LeftImage.addEventListener("load",drawScreen, false);
 
-var playerSkill_02LeftImage = new Image();
-playerSkill_02LeftImage.src = "./img/player02_skill02_left.png"; 
-playerSkill_02LeftImage.addEventListener("load",drawScreen, false);
+    //플레이어 스킬3이미지
+    var playerSkill_03Image = new Image();
+    playerSkill_03Image.src = "./img/player_skill03.png"; 
+    playerSkill_03Image.addEventListener("load",drawScreen, false);
 
-//플레이어 스킬3이미지
-var playerSkill_03Image = new Image();
-playerSkill_03Image.src = "./img/player02_skill03.png"; 
-playerSkill_03Image.addEventListener("load",drawScreen, false);
+    //플레이어 스킬3tmp이미지
+    var playerSkill_03TmpImage = new Image();
+    playerSkill_03TmpImage.src = "./img/player_skill03tmp.png"; 
+    playerSkill_03TmpImage.addEventListener("load",drawScreen, false); 
 
-//플레이어 스킬3tmp이미지
-var playerSkill_03TmpImage = new Image();
-playerSkill_03TmpImage.src = "./img/player02_skill03tmp.png"; 
-playerSkill_03TmpImage.addEventListener("load",drawScreen, false); 
+    //플레이어 스킬3tmp2이미지
+    var playerSkill_03Tmp2Image = new Image();
+    playerSkill_03Tmp2Image.src = "./img/player_skill03tmp.png"; 
+    playerSkill_03Tmp2Image.addEventListener("load",drawScreen, false);
 
-//플레이어 스킬3tmp2이미지
-var playerSkill_03Tmp2Image = new Image();
-playerSkill_03Tmp2Image.src = "./img/player02_skill03tmp.png"; 
-playerSkill_03Tmp2Image.addEventListener("load",drawScreen, false);
+    //플레이어 스킬4이미지
+    var playerSkill_04Image = new Image();
+    playerSkill_04Image.src = "./img/player_skill01.png"; 
+    playerSkill_04Image.addEventListener("load",drawScreen, false);
 
-//플레이어 스킬4이미지
-var playerSkill_04Image = new Image();
-playerSkill_04Image.src = "./img/player02_skill01.png"; 
-playerSkill_04Image.addEventListener("load",drawScreen, false);
-
-//플레이어 스킬5이미지
-var playerSkill_05Image = new Image();
-playerSkill_05Image.src = "./img/player02_skill03.png"; 
-playerSkill_05Image.addEventListener("load",drawScreen, false);
+    //플레이어 스킬5이미지
+    var playerSkill_05Image = new Image();
+    playerSkill_05Image.src = "./img/player_skill03.png"; 
+    playerSkill_05Image.addEventListener("load",drawScreen, false);
 
 
 }else {
@@ -628,100 +627,100 @@ playerSkill_05Image.addEventListener("load",drawScreen, false);
     
 
 
-//폭파이미지01
-var explosionImage01 = new Image(); 
-explosionImage01.src = "./img/explosion01.png";
-explosionImage01.addEventListener("load",drawScreen, false);
+    //폭파이미지01
+    var explosionImage01 = new Image(); 
+    explosionImage01.src = "./img/explosion01.png";
+    explosionImage01.addEventListener("load",drawScreen, false);
 
-//엔진이미지
-var player_enginImage = new Image();
-player_enginImage.src = "./img/engin.png";
-player_enginImage.addEventListener("load",drawScreen, false);
+    //엔진이미지
+    var player_enginImage = new Image();
+    player_enginImage.src = "./img/engin.png";
+    player_enginImage.addEventListener("load",drawScreen, false);
 
-// enginImage = enginImage;
-// enginImage.src = enginImage.src;
+    // enginImage = enginImage;
+    // enginImage.src = enginImage.src;
 
-//플레이어 스킬이미지
-var playerSkillImage = new Image();
-playerSkillImage.src = "./img/none.png"; 
-playerSkillImage.addEventListener("load",drawScreen, false);
+    //플레이어 스킬이미지
+    var playerSkillImage = new Image();
+    playerSkillImage.src = "./img/none.png"; 
+    playerSkillImage.addEventListener("load",drawScreen, false);
 
-//플레이어 스킬0이미지
-var playerSword_Image = new Image();
-//playerSword_Image.src = "./img/noneImage.png"; 
-playerSword_Image.src = "./img/none.png"; 
-playerSword_Image.addEventListener("load",drawScreen, false);
+    //플레이어 스킬0이미지
+    var playerSword_Image = new Image();
+    //playerSword_Image.src = "./img/noneImage.png"; 
+    playerSword_Image.src = "./img/none.png"; 
+    playerSword_Image.addEventListener("load",drawScreen, false);
 
-var playerSword_StopImage = new Image();
-playerSword_StopImage.src = "./img/player_skill00.png"; 
-playerSword_StopImage.addEventListener("load",drawScreen, false);
+    var playerSword_StopImage = new Image();
+    playerSword_StopImage.src = "./img/player_skill00.png"; 
+    playerSword_StopImage.addEventListener("load",drawScreen, false);
 
-var playerSword_UpImage = new Image();
-playerSword_UpImage.src = "./img/player_skill00_up.png"; 
-playerSword_UpImage.addEventListener("load",drawScreen, false);
+    var playerSword_UpImage = new Image();
+    playerSword_UpImage.src = "./img/player_skill00_up.png"; 
+    playerSword_UpImage.addEventListener("load",drawScreen, false);
 
-var playerSword_RightImage = new Image();
-playerSword_RightImage.src = "./img/player_skill00_right.png"; 
-playerSword_RightImage.addEventListener("load",drawScreen, false);
+    var playerSword_RightImage = new Image();
+    playerSword_RightImage.src = "./img/player_skill00_right.png"; 
+    playerSword_RightImage.addEventListener("load",drawScreen, false);
 
-var playerSword_LeftImage = new Image();
-playerSword_LeftImage.src = "./img/player_skill00_left.png"; 
-playerSword_LeftImage.addEventListener("load",drawScreen, false);
+    var playerSword_LeftImage = new Image();
+    playerSword_LeftImage.src = "./img/player_skill00_left.png"; 
+    playerSword_LeftImage.addEventListener("load",drawScreen, false);
 
-var playerSword_DownImage = new Image();
-playerSword_DownImage.src = "./img/player_skill00_down.png"; 
-playerSword_DownImage.addEventListener("load",drawScreen, false);
+    var playerSword_DownImage = new Image();
+    playerSword_DownImage.src = "./img/player_skill00_down.png"; 
+    playerSword_DownImage.addEventListener("load",drawScreen, false);
 
-//플레이어 스킬1이미지
-var playerSkill_01Image = new Image();
-playerSkill_01Image.src = "./img/player_skill01_down.png"; 
-playerSkill_01Image.addEventListener("load",drawScreen, false);
+    //플레이어 스킬1이미지
+    var playerSkill_01Image = new Image();
+    playerSkill_01Image.src = "./img/player_skill01_down.png"; 
+    playerSkill_01Image.addEventListener("load",drawScreen, false);
 
-//플레이어 스킬2이미지
-var playerSkill_02Image = new Image();
-playerSkill_02Image.src = "./img/player_skill02_up.png"; 
-playerSkill_02Image.addEventListener("load",drawScreen, false);
+    //플레이어 스킬2이미지
+    var playerSkill_02Image = new Image();
+    playerSkill_02Image.src = "./img/player_skill02_up.png"; 
+    playerSkill_02Image.addEventListener("load",drawScreen, false);
 
-var playerSkill_02UpImage = new Image();
-playerSkill_02UpImage.src = "./img/player_skill02_up.png"; 
-playerSkill_02UpImage.addEventListener("load",drawScreen, false);
+    var playerSkill_02UpImage = new Image();
+    playerSkill_02UpImage.src = "./img/player_skill02_up.png"; 
+    playerSkill_02UpImage.addEventListener("load",drawScreen, false);
 
-var playerSkill_02RightImage = new Image();
-playerSkill_02RightImage.src = "./img/player_skill02_right.png"; 
-playerSkill_02RightImage.addEventListener("load",drawScreen, false);
+    var playerSkill_02RightImage = new Image();
+    playerSkill_02RightImage.src = "./img/player_skill02_right.png"; 
+    playerSkill_02RightImage.addEventListener("load",drawScreen, false);
 
-var playerSkill_02DownImage = new Image();
-playerSkill_02DownImage.src = "./img/player_skill02_down.png"; 
-playerSkill_02DownImage.addEventListener("load",drawScreen, false);
+    var playerSkill_02DownImage = new Image();
+    playerSkill_02DownImage.src = "./img/player_skill02_down.png"; 
+    playerSkill_02DownImage.addEventListener("load",drawScreen, false);
 
-var playerSkill_02LeftImage = new Image();
-playerSkill_02LeftImage.src = "./img/player_skill02_left.png"; 
-playerSkill_02LeftImage.addEventListener("load",drawScreen, false);
+    var playerSkill_02LeftImage = new Image();
+    playerSkill_02LeftImage.src = "./img/player_skill02_left.png"; 
+    playerSkill_02LeftImage.addEventListener("load",drawScreen, false);
 
-//플레이어 스킬3이미지
-var playerSkill_03Image = new Image();
-playerSkill_03Image.src = "./img/player_skill03.png"; 
-playerSkill_03Image.addEventListener("load",drawScreen, false);
+    //플레이어 스킬3이미지
+    var playerSkill_03Image = new Image();
+    playerSkill_03Image.src = "./img/player_skill03.png"; 
+    playerSkill_03Image.addEventListener("load",drawScreen, false);
 
-//플레이어 스킬3tmp이미지
-var playerSkill_03TmpImage = new Image();
-playerSkill_03TmpImage.src = "./img/player_skill03tmp.png"; 
-playerSkill_03TmpImage.addEventListener("load",drawScreen, false); 
+    //플레이어 스킬3tmp이미지
+    var playerSkill_03TmpImage = new Image();
+    playerSkill_03TmpImage.src = "./img/player_skill03tmp.png"; 
+    playerSkill_03TmpImage.addEventListener("load",drawScreen, false); 
 
-//플레이어 스킬3tmp2이미지
-var playerSkill_03Tmp2Image = new Image();
-playerSkill_03Tmp2Image.src = "./img/player_skill03tmp.png"; 
-playerSkill_03Tmp2Image.addEventListener("load",drawScreen, false);
+    //플레이어 스킬3tmp2이미지
+    var playerSkill_03Tmp2Image = new Image();
+    playerSkill_03Tmp2Image.src = "./img/player_skill03tmp.png"; 
+    playerSkill_03Tmp2Image.addEventListener("load",drawScreen, false);
 
-//플레이어 스킬4이미지
-var playerSkill_04Image = new Image();
-playerSkill_04Image.src = "./img/player_skill01.png"; 
-playerSkill_04Image.addEventListener("load",drawScreen, false);
+    //플레이어 스킬4이미지
+    var playerSkill_04Image = new Image();
+    playerSkill_04Image.src = "./img/player_skill01.png"; 
+    playerSkill_04Image.addEventListener("load",drawScreen, false);
 
-//플레이어 스킬5이미지
-var playerSkill_05Image = new Image();
-playerSkill_05Image.src = "./img/player_skill03.png"; 
-playerSkill_05Image.addEventListener("load",drawScreen, false);
+    //플레이어 스킬5이미지
+    var playerSkill_05Image = new Image();
+    playerSkill_05Image.src = "./img/player_skill03.png"; 
+    playerSkill_05Image.addEventListener("load",drawScreen, false);
 
 
 }

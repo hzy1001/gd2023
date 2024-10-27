@@ -193,9 +193,11 @@ $(document).ready(function(e){
 					// 	//})
 					// }, 20000);
 
+					var mNum = window.location.search.substring(1); 
+
 					setTimeout(function() {
 						$("#imgIntro").fadeOut( "slow", function() {
-							window.location = 'play.html';
+							window.location = 'play.html?'+mNum;
 						})
 					}, 25000);
 
@@ -203,7 +205,7 @@ $(document).ready(function(e){
 
 						//$("#imgIntro").fadeOut( "slow", function() {
 	
-							window.location = 'play.html';
+							window.location = 'play.html?'+mNum;
 
 							//var href = 'play.html';
 							//$("#totIntro").load(href);

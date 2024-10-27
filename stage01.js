@@ -147,7 +147,7 @@ button01 = new Path2D();
 button01.fillStyle = "rgb(242, 255, 0)";
 //button01.arc(maxX - 250, maxY - 180, 80, 0, 2*Math.PI, true);    //arc(x, y, radius, startAngle, endAngle, anticlockwise)
 button01.arc(maxX - 100, maxY - 180, 100, 0, 2*Math.PI, true);    //arc(x, y, radius, startAngle, endAngle, anticlockwise)
-
+ 
 //와프버튼
 button02 = new Path2D();
 button02.fillStyle = "rgb(242, 255, 0)";
@@ -431,53 +431,202 @@ riverImage.src = "./img/river.png";
 riverImage.addEventListener("load",drawScreen, false);
 
 ///////////////////////////////////플레이어 초기 설정///////////////////////////////////////////////////////
-var playerImage = new Image();
-playerImage.src = "./img/player.png";
-//playerImage.src = "player29.png";
-playerImage.addEventListener("load",drawScreen, false);
+var mNum = window.location.search.substring(1);
 
-var player = new Image();
-player.src = "./img/player.png";
-//playerImage.src = "player29.png";
-player.addEventListener("load",drawScreen, false);
+if (mNum==1){
+    var playerImage = new Image();
+    playerImage.src = "./img/player.png";
+    //playerImage.src = "player29.png";
+    playerImage.addEventListener("load",drawScreen, false);
 
-var player_90 = new Image();
-player_90.src = "./img/player_90.png";
-player_90.addEventListener("load",drawScreen, false);
+    var player = new Image();
+    player.src = "./img/player.png";
+    //playerImage.src = "player29.png";
+    player.addEventListener("load",drawScreen, false);
 
-var player_135 = new Image();
-player_135.src = "./img/player_135.png";
-player_135.addEventListener("load",drawScreen, false);
+    var player_90 = new Image();
+    player_90.src = "./img/player_90.png";
+    player_90.addEventListener("load",drawScreen, false);
 
-var player_180 = new Image();
-player_180.src = "./img/player_180.png";
-player_180.addEventListener("load",drawScreen, false);
+    var player_135 = new Image();
+    player_135.src = "./img/player_135.png";
+    player_135.addEventListener("load",drawScreen, false);
 
-var player_270 = new Image();
-player_270.src = "./img/player_270.png";
-player_270.addEventListener("load",drawScreen, false);
+    var player_180 = new Image();
+    player_180.src = "./img/player_180.png";
+    player_180.addEventListener("load",drawScreen, false);
 
-var player_360 = new Image();
-player_360.src = "./img/player_360.png";
-player_360.addEventListener("load",drawScreen, false);
+    var player_270 = new Image();
+    player_270.src = "./img/player_270.png";
+    player_270.addEventListener("load",drawScreen, false);
 
-var player_45 = new Image();
-player_45.src = "./img/player_45.png";
-player_45.addEventListener("load",drawScreen, false);
+    var player_360 = new Image();
+    player_360.src = "./img/player_360.png";
+    player_360.addEventListener("load",drawScreen, false);
 
-//플레이어 와프이미지
-var player_warp = new Image();
-player_warp.src = "./img/player_warp.png";
-player_warp.addEventListener("load",drawScreen, false);
+    var player_45 = new Image();
+    player_45.src = "./img/player_45.png";
+    player_45.addEventListener("load",drawScreen, false);
 
-var warp = new Image();
-warp.src = "./img/player_warp.png";
-warp.addEventListener("load",drawScreen, false);
+    //플레이어 와프이미지
+    var player_warp = new Image();
+    player_warp.src = "./img/player_warp.png";
+    player_warp.addEventListener("load",drawScreen, false);
 
-//플레이어 쉴드이미지
-var player_shield = new Image();
-player_shield.src = "./img/player_shield.png";
-player_shield.addEventListener("load",drawScreen, false);
+    var warp = new Image();
+    warp.src = "./img/player_warp.png";
+    warp.addEventListener("load",drawScreen, false);
+
+    //플레이어 쉴드이미지
+    var player_shield = new Image();
+    player_shield.src = "./img/player_shield.png";
+    player_shield.addEventListener("load",drawScreen, false);
+
+
+//폭파이미지01
+var explosionImage01 = new Image(); 
+explosionImage01.src = "./img/explosion01.png";
+explosionImage01.addEventListener("load",drawScreen, false);
+
+//엔진이미지
+var player_enginImage = new Image();
+player_enginImage.src = "./img/engin.png";
+player_enginImage.addEventListener("load",drawScreen, false);
+
+// enginImage = enginImage;
+// enginImage.src = enginImage.src;
+
+//플레이어 스킬이미지
+var playerSkillImage = new Image();
+playerSkillImage.src = "./img/none.png"; 
+playerSkillImage.addEventListener("load",drawScreen, false);
+
+//플레이어 스킬0이미지
+var playerSword_Image = new Image();
+//playerSword_Image.src = "./img/noneImage.png"; 
+playerSword_Image.src = "./img/none.png"; 
+playerSword_Image.addEventListener("load",drawScreen, false);
+
+var playerSword_StopImage = new Image();
+playerSword_StopImage.src = "./img/player02_skill00.png"; 
+playerSword_StopImage.addEventListener("load",drawScreen, false);
+
+var playerSword_UpImage = new Image();
+playerSword_UpImage.src = "./img/player02_skill00_up.png"; 
+playerSword_UpImage.addEventListener("load",drawScreen, false);
+
+var playerSword_RightImage = new Image();
+playerSword_RightImage.src = "./img/player02_skill00_right.png"; 
+playerSword_RightImage.addEventListener("load",drawScreen, false);
+
+var playerSword_LeftImage = new Image();
+playerSword_LeftImage.src = "./img/player02_skill00_left.png"; 
+playerSword_LeftImage.addEventListener("load",drawScreen, false);
+
+var playerSword_DownImage = new Image();
+playerSword_DownImage.src = "./img/player02_skill00_down.png"; 
+playerSword_DownImage.addEventListener("load",drawScreen, false);
+
+//플레이어 스킬1이미지
+var playerSkill_01Image = new Image();
+playerSkill_01Image.src = "./img/player02_skill01_down.png"; 
+playerSkill_01Image.addEventListener("load",drawScreen, false);
+
+//플레이어 스킬2이미지
+var playerSkill_02Image = new Image();
+playerSkill_02Image.src = "./img/player02_skill02_up.png"; 
+playerSkill_02Image.addEventListener("load",drawScreen, false);
+
+var playerSkill_02UpImage = new Image();
+playerSkill_02UpImage.src = "./img/player02_skill02_up.png"; 
+playerSkill_02UpImage.addEventListener("load",drawScreen, false);
+
+var playerSkill_02RightImage = new Image();
+playerSkill_02RightImage.src = "./img/player02_skill02_right.png"; 
+playerSkill_02RightImage.addEventListener("load",drawScreen, false);
+
+var playerSkill_02DownImage = new Image();
+playerSkill_02DownImage.src = "./img/player02_skill02_down.png"; 
+playerSkill_02DownImage.addEventListener("load",drawScreen, false);
+
+var playerSkill_02LeftImage = new Image();
+playerSkill_02LeftImage.src = "./img/player02_skill02_left.png"; 
+playerSkill_02LeftImage.addEventListener("load",drawScreen, false);
+
+//플레이어 스킬3이미지
+var playerSkill_03Image = new Image();
+playerSkill_03Image.src = "./img/player02_skill03.png"; 
+playerSkill_03Image.addEventListener("load",drawScreen, false);
+
+//플레이어 스킬3tmp이미지
+var playerSkill_03TmpImage = new Image();
+playerSkill_03TmpImage.src = "./img/player02_skill03tmp.png"; 
+playerSkill_03TmpImage.addEventListener("load",drawScreen, false); 
+
+//플레이어 스킬3tmp2이미지
+var playerSkill_03Tmp2Image = new Image();
+playerSkill_03Tmp2Image.src = "./img/player02_skill03tmp.png"; 
+playerSkill_03Tmp2Image.addEventListener("load",drawScreen, false);
+
+//플레이어 스킬4이미지
+var playerSkill_04Image = new Image();
+playerSkill_04Image.src = "./img/player02_skill01.png"; 
+playerSkill_04Image.addEventListener("load",drawScreen, false);
+
+//플레이어 스킬5이미지
+var playerSkill_05Image = new Image();
+playerSkill_05Image.src = "./img/player02_skill03.png"; 
+playerSkill_05Image.addEventListener("load",drawScreen, false);
+
+
+}else {
+    var playerImage = new Image();
+    playerImage.src = "./img/player02.png"; 
+    playerImage.addEventListener("load",drawScreen, false);
+
+    var player = new Image();
+    player.src = "./img/player02.png"; 
+    player.addEventListener("load02",drawScreen, false);
+
+    var player_90 = new Image();
+    player_90.src = "./img/player02_90.png";
+    player_90.addEventListener("load",drawScreen, false);
+
+    var player_135 = new Image();
+    player_135.src = "./img/player02_135.png";
+    player_135.addEventListener("load",drawScreen, false);
+
+    var player_180 = new Image();
+    player_180.src = "./img/player02_180.png";
+    player_180.addEventListener("load",drawScreen, false);
+
+    var player_270 = new Image();
+    player_270.src = "./img/player02_270.png";
+    player_270.addEventListener("load",drawScreen, false);
+
+    var player_360 = new Image();
+    player_360.src = "./img/player02_360.png";
+    player_360.addEventListener("load",drawScreen, false);
+
+    var player_45 = new Image();
+    player_45.src = "./img/player02_45.png";
+    player_45.addEventListener("load",drawScreen, false);
+
+    //플레이어 와프이미지
+    var player_warp = new Image();
+    player_warp.src = "./img/player02_warp.png";
+    player_warp.addEventListener("load",drawScreen, false);
+
+    var warp = new Image();
+    warp.src = "./img/player02_warp.png";
+    warp.addEventListener("load",drawScreen, false);
+
+    //플레이어 쉴드이미지
+    var player_shield = new Image();
+    player_shield.src = "./img/player02_shield.png";
+    player_shield.addEventListener("load",drawScreen, false);
+    
+
 
 //폭파이미지01
 var explosionImage01 = new Image(); 
@@ -573,6 +722,9 @@ playerSkill_04Image.addEventListener("load",drawScreen, false);
 var playerSkill_05Image = new Image();
 playerSkill_05Image.src = "./img/player_skill03.png"; 
 playerSkill_05Image.addEventListener("load",drawScreen, false);
+
+
+}
 
 //이전 플레이어 진행방향 키값 => 속도변경시 방향키 새로 안눌러두 이전 방향으로 계속해서 진행되도록 하기위해 필요
 var wayBefore = null;
@@ -5488,6 +5640,7 @@ function fit_fullsize(){
         //button01.arc(maxX - 250, maxY - 180, 80, 0, 2*Math.PI, true);    //arc(x, y, radius, startAngle, endAngle, anticlockwise)
         button01.arc(maxX - 250, maxY - 180, 100, 0, 2*Math.PI, true);    //arc(x, y, radius, startAngle, endAngle, anticlockwise)
 
+        
         button02 = new Path2D();
         button02.fillStyle = "rgb(242, 255, 0)";
         //button02.arc(maxX - 80, maxY - 180, 80, 0, 2*Math.PI, true);    //arc(x, y, radius, startAngle, endAngle, anticlockwise)
@@ -5506,6 +5659,8 @@ function fit_fullsize(){
  
     } 
 }
+
+
 //////////////////마우스 클릭시 이벤트 메핑
 GameCanvas.addEventListener('mousedown', function(event) { 
 
@@ -7671,6 +7826,13 @@ function drawScreen(){
         //Context.fillText("FPS : " + ini_gameFrame,10,200); 
         Context.fillText("검기 : " + swordMoveCnt,10,200);        
         
+  
+        Context.fillText('검', maxX - 230, maxY - 290);  
+        Context.fillText('공격', maxX - 130, maxY - 170);  
+        Context.fillText('회피', maxX - 300, maxY - 170);
+        Context.fillText('무기변경', maxX - 270, maxY - 50);
+
+
         //Context.fillText("시간 : " + gameTime,10,200);    
     }else {
         //Context.fillText("Score  : " + (parseInt(gameScore - 200)<=0?0:gameScore),10,50);

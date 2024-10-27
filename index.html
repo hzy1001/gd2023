@@ -100,7 +100,7 @@ background-position: 50% -5%; */
 </style>
 </head>
     <!-- <body bgcolor="#262626" background="./img/main_intro.jpg" onload="play_misound();" > -->
-	<body bgcolor="#262626" background="./img/main_intro.jpg"  >
+	<body id="mainBody" bgcolor="#262626" background="./img/main_intro1.jpg"  >
 	<div id="tot_div" style="width: 100%;height: 100%;">	  
 		<div id="totdiv"  oncontextmenu="return false" ondragstart="return false" onselectstart="return false" style="position: absolute;left:0%;top:0%;background:#262626;text-align:center;vertical-align:middle;font-size:17pt;color:white;z-index:1000;display:table;height:100%;width:100%;visibility:hidden;">
 				<p style="display:table-cell; text-align:center; vertical-align:middle;">This game is impossible on portrait.</p>
@@ -128,13 +128,14 @@ background-position: 50% -5%; */
 		<audio id='misound' src='./sound/intro.ogg'></audio>
 		 <audio id='stsound' src='./sound/laser.ogg'></audio>
 		 <audio id='intro01' src='./sound/intro01.ogg'></audio>
+		 <audio id='stmount' src='./sound/mount.ogg'></audio>
 		<div style="position: absolute; top: 0px; left: 10px; z-index:200;">
 		    <button id="DColor" class="circle" style="opacity:0.3" ></button>			
 			<button id="CColor" class="circle" style="opacity:0.3;" ></button>
 		    <button id="VColor" class="circle" style="opacity:0.3;" ></button>			
 		</div>
 		<div id="title" class="main" style="background:'#5f7a8a';text-align:center; z-index:10; width:96%;">
-		Gun Dodge 2023
+		Gun Dodge 2024
 		</div>
 		<div id="mark" style="position: absolute; top:calc(60% - 200px); left:calc(50% - 200px); width:500px;">
 		<svg  width="100%" height="335">
@@ -151,7 +152,10 @@ background-position: 50% -5%; */
 		</div>
 		<div id="start" class="button"  style="position: absolute; top:57%; left:calc(50% - 110px); width:160px; z-index:200;">
 		<!-- Single Play -->
-		<b>Game Start</b>
+		Game Start
+		</div>
+	    <div id="change" class="button"  style="position: absolute; top:76%; left:calc(50% - 110px); width:160px; z-index:200;">
+		Change Mecha
 		</div>
 		<!-- <div id="multi" class="button"  style="position: absolute; top:76%; left:calc(50% - 110px); width:160px; z-index:200;">
 		Multi Play
@@ -298,6 +302,24 @@ $(function(){
 
 	};
 
+	//변경버튼 효과음
+	function MtSound(){
+
+	//변경음음효과
+	var stmount = document.getElementById('stmount');
+
+	if (stmount != null){ 
+ 		
+		misound.pause();
+
+		stmount.currentTime = 5; //재생위치
+
+		stmount.play();
+	}
+	return 1;
+
+	};
+
 	//인트로 음악
 	function IntroSound(){
 		//intro효과
@@ -311,11 +333,20 @@ $(function(){
 			intro01.play();
 		}
 	};
+
+
+	//선택 머신
+	var mechaNum = 1;
+
 	//$("#start").bind('touchstart', function(e) {
 	//jquery 3.3.1 버젼부터는 클릭(click)과 터치(touchstart) 이벤트가 통합된듯함.
 		start.addEventListener('click', function() {
 		//$("#start").click(function(){ 
 
+
+			$("#start").css("font-weight","bold"); 
+			$("#change").css("font-weight","normal"); 
+			
 			if (StSound() != 1)  {
 			return;
 			}
@@ -354,7 +385,7 @@ $(function(){
 				//toggleFullScreen(); 
 				//setTimeout(startIntro, 1000);
 
-				window.location = 'intro.html'; 
+				window.location = 'intro.html?'+mechaNum;
 
 			});
 
@@ -441,7 +472,7 @@ $(function(){
 					$(".main").fadeOut( "slow", function() {
 
 
-						window.location = 'play.html';
+						window.location = 'play.html?'+mechaNum;
 
 						//var href = 'play.html';
 						//$("#totIntro").load(href);
@@ -454,6 +485,32 @@ $(function(){
 
 		}
 
+
+	change.addEventListener('click', function() {
+	//$("#change").click(function(){ 
+		$("#start").css("font-weight","normal"); 
+		$("#change").css("font-weight","bold"); 
+ 
+		$('body').fadeOut(500, function() {
+			
+			if (mechaNum == 1){
+			    mechaNum = 2;                    
+				$(this).css('background-image', 'url("./img/main_intro2.jpg")').fadeIn(300);
+		    }else {
+				mechaNum = 1; 
+				$(this).css('background-image', 'url("./img/main_intro1.jpg")').fadeIn(300);                   
+			}; 
+		})
+
+		if (MtSound() != 1)  {
+		return;
+		}
+
+		//시작음효과
+		var stmount = document.getElementById('stmount');
+	}) 
+
+		
 	//게임 설치 버튼
 	/*
 	기존에 웹 앱이 설치되어 있지 않아야 합니다.
